@@ -26,6 +26,7 @@ function App() {
 */
 
 function App() {
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
   const [messageColor, setMessageColor] = useState('');
@@ -43,6 +44,10 @@ function App() {
     }
   };
 
+  const handleUsernameChange = (event) => {
+    setUsername(event.target.value);
+  };
+
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
   };
@@ -53,7 +58,7 @@ function App() {
       <form onSubmit={verifyPassword}>
           <p>
             <label>Username :</label>
-            <input type="text" name="usename" placeholder="nom d'utilisateur"/>
+            <input type="text" name="usename" placeholder="nom d'utilisateur" value={username} onChange={handleUsernameChange}/>
           </p>
 
           <p>
@@ -66,6 +71,7 @@ function App() {
       {/* Afficher le message dans la div */}
       <div style={{ color: messageColor }}>{message}</div>
     </div>
+    
   );
 }
 

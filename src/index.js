@@ -7,6 +7,7 @@ import FunctionnnalComponent from './composant/salutMecComposant'
 import MonComposant from './composant/componentLogin';
 import Xcomposant from './composant/componentTernaire'
 import XcomposantBoucle from './composant/componentBoucle'
+import EXO31Component from './composant/ParentComponent'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,6 +17,7 @@ root.render(
     <MonComposant login="username" password="mdp"/>
     <Xcomposant isConnected="false"/>
     <XcomposantBoucle/>
+    <EXO31Component/>
   </React.StrictMode>
 );
 
