@@ -1,15 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import ChildComponent from './childComponent';
 
 const ParentComponent = () => {
   const [login, setLogin] = useState('');
   const [password, setPassword] = useState('');
-  const [isValid, setIsValid] = useState(false);
-
-  useEffect(() => {
-    // Vérifiez si les deux champs sont renseignés
-    setIsValid(login !== '' && password !== '');
-  }, [login, password]);
+  const [isValid] = useState(false);
 
   const handleLoginChange = (event) => {
     setLogin(event.target.value);
