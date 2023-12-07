@@ -7,7 +7,7 @@ function composant () {
       <div>
         <ul>
             {nombres.map(nombre => (
-                <li>{nombre}</li>
+                <li key={nombre}>{nombre}</li>
             ))}
         </ul>
       </div>
