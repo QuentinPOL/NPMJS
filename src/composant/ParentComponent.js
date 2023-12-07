@@ -28,7 +28,7 @@ const ParentComponent = () => {
           <input type="password" value={password} onChange={handlePasswordChange} />
         </label>
         <br />
-        <button type="submit">Submit</button>
+        {/*<button type="submit">Submit</button>*/}
       </form>
 
       {/* Intégration du composant enfant */}
